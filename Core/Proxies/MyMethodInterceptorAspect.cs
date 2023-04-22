@@ -6,17 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace proxyLibrary
+namespace ConsoleProxy.Proxies
 {
-    public class MyMethodInterceptorAspect:MehtodInterception
+    public class MyMethodInterceptorAspect : MehtodInterception
     {
         public override void onBefore(IInvocation invocation)
         {
-            Console.WriteLine("öncesi çalıştı");
+            Console.WriteLine("oncesi method çalışıyor");
+
         }
+
         public override void onAfter(IInvocation invocation)
         {
-            Console.WriteLine("sonrası çalıştı");
+            Console.WriteLine("method sonrası çalışıyor");
         }
     }
 }

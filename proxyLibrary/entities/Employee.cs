@@ -4,21 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dynamicProxyDemo.entities
+namespace Entities.entities
 {
-    public class Employee
+    public class Employee:IEmployee
     {
 
-        public int id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public int? id { get; set; }
+        public string? firstName { get; set; }
+        public string? lastName { get; set; }
 
-        public virtual void Add(Employee entity)
-        {
-            Console.WriteLine($"{entity.id} : id niz");
-            Console.WriteLine($"{entity.lastName}");
-            Console.WriteLine($"{entity.firstName} :");
-            Console.WriteLine("soy isminiz");
-        }
+        
     }
 }

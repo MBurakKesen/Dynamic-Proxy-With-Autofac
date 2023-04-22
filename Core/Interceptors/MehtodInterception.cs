@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Interceptors
 {
-    public  class MehtodInterception:MethodInterceptorsBaseAttribute
+    public class MehtodInterception:MethodInterceptorsBaseAttribute
     {
         public override void Intercept(IInvocation invocation)
         {

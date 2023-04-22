@@ -1,30 +1,25 @@
 ﻿using Autofac;
-using Castle.DynamicProxy;
+using Bussiness;
 using ConsoleProxy.Proxies;
 using Core.Moduls;
 using Entities.entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleProxy
+namespace Console
 {
-    public class program
+    public class Program
     {
-       static void Main()
+      
+        static void Main(string[] args)
         {
             var builder = new ContainerBuilder();
             builder.RegisterModule(new DefaultModule());
-
-            var container=builder.Build();
-            var willBeIntercepted = container.Resolve<EmployeeManager>();
+            var container = builder.Build();
+            var willBeIntercepted = container.Resolve<IEmployeeService>();
             willBeIntercepted.Add(new Employee { firstName = "Burak", lastName = "Kesen", id = 1 });
 
 
-     
         }
+
     }
 }
- 
